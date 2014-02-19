@@ -8,7 +8,7 @@ wheel=struct(field1,value1,field2,value2);
 %subsub speed reducer
 field1='type';
 value1='reverted';
-field2='diam_pinon';
+field2='diam_pinion';
 value2=.04;
 field3='diam_gear';
 value3=.06;
