@@ -6,7 +6,7 @@ if nargin ~= 5
     error('Check number of inputs');
 elseif isnumeric(omega_motor)~=1 ||isnumeric(terrain_angle) ~= 1 
     error('Omega_motor and/or terrain_angleis not a numeric array');
-elseif terrain_angle >75 || terrain_angle<-75
+elseif terrain_angle >75*pi/180 || terrain_angle<-75*pi/180
     error('Terrain_angle is not practicle');
 elseif isstruct(rover)~=1 || isstruct(planet)~=1
     error('Rover is not a structure array');
