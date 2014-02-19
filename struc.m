@@ -42,6 +42,6 @@ power_subsys=struct(field1,value1);
 %struct rover
 rover=struct('wheel_assembly',wheel_assembly,'chassis',chassis,'science_payload',science_payload,'power_subsys',power_subsys);
 %struct planet
-planet=struct('g',3.72);
+planet=struct('g',-3.72);
 
 
