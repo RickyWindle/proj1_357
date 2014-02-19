@@ -2,11 +2,11 @@ function [ Fd ] = F_drive( omega_motor,rover )
 %UNTITLED6 Summary of this function goes here
 %   Detailed explanation goes here
 if nargin ~= 2
-    error('Check number of inputs')
+    error('Check number of inputs');
 elseif isnumeric(omega_motor) ~= 1
-    error('Omega_motor is not a numeric array')
+    error('Omega_motor is not a numeric array');
 elseif isstruct(rover)~=1
-    error('Rover is not a structure array')
+    error('Rover is not a structure array');
 else
     tau_in=tau_dcmotor(omega_motor,rover.wheel_assembly.motor);
     Ng=get_gear_ratio(rover.wheel_assembly.speed_reducer);

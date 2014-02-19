@@ -4,11 +4,11 @@ function [ tau ] = tau_dcmotor( omega, motor )
 % omegacheck=isnumeric(omega)
 % omegasize=length(omega)
 if nargin ~= 2
-    error('Check number of inputs')
+    error('Check number of inputs');
 elseif isnumeric(omega) ~= 1
-    error('Omega is not a numeric array')
+    error('Omega is not a numeric array');
 elseif isstruct(motor)~=1
-    error('Motor is not a structure array')
+    error('Motor is not a structure array');
 else
     i=max(size(omega));
     tau=zeros(1,i);
