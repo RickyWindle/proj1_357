@@ -10,13 +10,17 @@ elseif isnumeric(omega) ~= 1
 elseif isstruct(motor)~=1
     error('Motor is not a structure array')
 else
-    if omega>motor.speed_noload
-        tau=0;
-    elseif omega < 0
-        tau = motor.torque_stall;
-    else
-        tau=motor.torque_stall-(motor.torque_stall-motor.torque_noload)*...
-        omega/motor.speed_noload;
+    i=max(size(omega));
+    tau=zeros(1,i);
+    for n=1:i
+        if omega(n)>motor.speed_noload
+            tau(n)=0;
+        elseif omega(n) < 0
+            tau(n) = motor.torque_stall;
+        else
+            tau(n)=motor.torque_stall-(motor.torque_stall-motor.torque_noload)*...
+            omega(n)/motor.speed_noload;
+        end
     end
 end
 end
