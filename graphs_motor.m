@@ -9,9 +9,9 @@ tau_s=rover.wheel_assembly.motor.torque_stall;
 tau_noload=rover.wheel_assembly.motor.torque_noload;
 
 for i=1:100;
-    tau=tau_s-((tau_s-tau_noload)/omega_noload)*omega(i);
+    tau(i)=tau_s-((tau_s-tau_noload)/omega_noload)*omega(i);
 end
- power=tau*omega;
+ power=tau.*omega;
 
 %Need omega vs. tau
 figure;
