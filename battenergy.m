@@ -25,8 +25,10 @@ for i=1:n-1
 end
 Emech=6*sum(Atrap);
 tau_data=rover.wheel_assembly.motor.effcy_tau;
+m=length(tau_data);
 eff_data=rover.wheel_assembly.motor.effcy;
-eff=interpl(tau_data,eff_data,tau_dcmotor,'spline');
-E=Emech/eff;
+tau_motor=linspace(tau_data(1),tau_data(m),100);
+eff=interp1(tau_data,eff_data,tau_motor,'spline');
+E=Emech/eff(tau_dcmotor(motorW(v,rover),motor);
 end
 
