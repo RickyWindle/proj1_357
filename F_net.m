@@ -16,7 +16,6 @@ else
     Fd=F_drive(omega_motor,rover);
     Fg=F_gravity(terrain_angle,rover,planet);
     Fr=F_rolling(terrain_angle,rover,Crr,planet,omega_motor);
-    Frr=(Fd+Fr)*6+Fg;
+    Frr=Fd+Fr+Fg;       % old version Frr=(Fd+Fr)*6+Fg;  apparently, we dont need to multiply the Fr by 6
 
 end
-

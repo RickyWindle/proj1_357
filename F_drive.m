@@ -15,9 +15,8 @@ else
     F=zeros(1,i);
     for n=1:i
         tau_out(n)=tau_in(n)*Ng;
-        F(n)=tau_out(n)/rover.wheel_assembly.wheel.radius;
+        F(n)=6*tau_out(n)/rover.wheel_assembly.wheel.radius;    %Changed this to what TA suggested
     end
-    Fd=sum(F);
+    Fd=F;
 end
 end
-

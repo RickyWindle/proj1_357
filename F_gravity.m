@@ -17,8 +17,7 @@ else
     for n=1:i
         F(n)=get_mass(rover)*planet.g*sind(terrain_angle(n));
     end
-    Fgt=sum(F);
+    Fgt=F;
 end
 
 end
-
