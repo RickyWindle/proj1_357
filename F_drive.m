@@ -9,7 +9,7 @@ elseif isstruct(rover)~=1
     error('Rover is not a structure array');
 else
     tau_in=tau_dcmotor(omega_motor,rover.wheel_assembly.motor);
-    Ng=get_gear_ratio(rover.wheel_assembly.speed_reducer);
+    Ng=get_gear_ratio(rover);
     i=max(size(tau_in));
     tau_out=zeros(1,i);
     F=zeros(1,i);

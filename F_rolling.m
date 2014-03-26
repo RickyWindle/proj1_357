@@ -18,7 +18,7 @@ else
     vr=zeros(1,i);
     F=zeros(1,i);
     for n=1:i
-        omega_out(n)=omega_motor(n)/get_gear_ratio(rover.wheel_assembly.speed_reducer);
+        omega_out(n)=omega_motor(n)/get_gear_ratio(rover);
         vr(n)=omega_out(n)*rover.wheel_assembly.wheel.radius;
         F(n)=erf(40*vr(n))*Crr*get_mass(rover)*planet.g*cosd(terrain_angle(n));
     end

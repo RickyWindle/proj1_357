@@ -24,7 +24,11 @@ field3='speed_noload';
 value3=3.85;
 field4='mass';
 value4=5;
-motor=struct(field1,value1,field2,value2,field3,value3,field4,value4);
+field5='effcy_tau';
+value5=[0,10,20,40,75,165];
+field6='effcy';
+value6=[0,.6,.75,.73,.55,.05];
+motor=struct(field1,value1,field2,value2,field3,value3,field4,value4,field5,value5,field6,value6);
 %sub wheel assembly
 wheel_assembly=struct('wheel',wheel,'speed_reducer',speed_reducer,'motor',motor);
 %sub chassis
