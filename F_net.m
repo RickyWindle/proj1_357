@@ -1,7 +1,6 @@
 function [ Frr ] = F_net( omega_motor,terrain_angle,rover,planet,Crr )
-%UNTITLED7 Summary of this function goes here
-%   Detailed explanation goes here
-
+%F_net.m computes the total force, in Netwons, acting on the rover
+%in the direction of its motion.
 if nargin ~= 5
     error('Check number of inputs');
 elseif isnumeric(omega_motor)~=1 ||isnumeric(terrain_angle) ~= 1 
