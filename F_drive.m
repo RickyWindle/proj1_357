@@ -1,6 +1,6 @@
 function [ Fd ] = F_drive( omega_motor,rover )
-%UNTITLED6 Summary of this function goes here
-%   Detailed explanation goes here
+%F_drive.m computes the combined drive force, in
+%Newtons, acting on the rover due to all six wheels.
 if nargin ~= 2
     error('Check number of inputs');
 elseif isnumeric(omega_motor) ~= 1

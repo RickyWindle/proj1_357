@@ -1,6 +1,6 @@
 function [ Frr ] = F_rolling( terrain_angle, rover, Crr, planet, omega_motor )
-%UNTITLED2 Summary of this function goes here
-%   Detailed explanation goes here
+%F_rolling.m computes the component of force due to rolling
+%resistance, in Newtons, acting in the direction of rover translation.
 
 if nargin ~= 5
     error('Check number of inputs');
