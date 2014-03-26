@@ -43,8 +43,31 @@ science_payload=struct(field1,value1);
 field1='mass';
 value1=100;
 power_subsys=struct(field1,value1);
+%sub telemetry
+field1='Time';
+value1=[];
+field2='completion_time';
+value2=[];
+field3='velocity';
+value3=[];
+field4='position';
+value4=[];
+field5='distance_traveled';
+value5=[];
+field6='max_velocity';
+value6=[];
+field7='average_energy';
+value7=[];
+field8='power';
+value8=[];
+field9='battery_energy';
+value9=[];
+field10='energy_per_distance';
+value10=[];
+telemetry=struct(field1,value1,field2,value2,field3,value3,field4,value4,field5,value5,...
+    field6,value6,field7,value7,field8,value8,field9,value9,field10,value10);
 %struct rover
-rover=struct('wheel_assembly',wheel_assembly,'chassis',chassis,'science_payload',science_payload,'power_subsys',power_subsys);
+rover=struct('wheel_assembly',wheel_assembly,'chassis',chassis,'science_payload',science_payload,'power_subsys',power_subsys,'telemetry',telemetry);
 %struct planet
 planet=struct('g',-3.72);
 
