@@ -70,5 +70,7 @@ telemetry=struct(field1,value1,field2,value2,field3,value3,field4,value4,field5,
 rover=struct('wheel_assembly',wheel_assembly,'chassis',chassis,'science_payload',science_payload,'power_subsys',power_subsys,'telemetry',telemetry);
 %struct planet
 planet=struct('g',-3.72);
+%struct end_event
+end_event=struct('max_distance',50,'max_time',5000,'min_velocity',.01)
 
 
