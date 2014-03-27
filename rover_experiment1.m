@@ -1,4 +1,4 @@
-tic
+
 load experiment1.mat;
 struc;
 end_event;
@@ -25,5 +25,3 @@ plot(rover.telemetry.Time,rover.telemetry.power),
 title('Rover Power vs. Time'),
 xlabel('Time (sec)'),
 ylabel('Power (W)');
-
-toc
