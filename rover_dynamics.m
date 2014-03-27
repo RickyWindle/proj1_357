@@ -7,7 +7,7 @@ m=get_mass(rover);
 w=motorW(y(1),rover);
 f=F_net(w,terrain_angle,rover,planet,experiment.crr);
 dydt(1)=(1/m)*f;
-dydt(2)=dydt(1)*t+y(1);
+dydt(2)=dydt(1)*t+experiment.initial_conditions(1);
 
 end
 

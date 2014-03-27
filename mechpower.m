@@ -8,6 +8,13 @@ elseif isnumeric(v)~=1
 elseif isstruct(rover)~=1
     error('rover is not a struct');
 end
-w=motorW(v,rover);
-P=tau_dcmotor(w,motor)*w;
+i=max(size(v));
+w=zeros(i,1);
+P=zeros(i,1);
+
+for n=1:i
+    w(n)=motorW(v(n),rover);
+    P(n)=tau_dcmotor(w(n),rover)*w(n);
+end
+
 end

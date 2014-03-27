@@ -56,7 +56,7 @@ field5='distance_traveled';
 value5=[];
 field6='max_velocity';
 value6=[];
-field7='average_energy';
+field7='average_velocity';
 value7=[];
 field8='power';
 value8=[];
@@ -71,6 +71,6 @@ rover=struct('wheel_assembly',wheel_assembly,'chassis',chassis,'science_payload'
 %struct planet
 planet=struct('g',-3.72);
 %struct end_event
-end_event=struct('max_distance',50,'max_time',5000,'min_velocity',.01)
+end_event=struct('max_distance',50,'max_time',5000,'min_velocity',.01);
 
 

@@ -17,18 +17,28 @@ elseif isstruct(rover)~=1
 elseif n<2
     error('Need at least 2 points to evaluate an integral');
 end
-P=mechpower(v,rover);
-h=(t(n)-t(1))/(n-1);
-Atrap=zeros(n-1);
-for i=1:n-1
-    Atrap(i)=(P(i)+P(i+1))/2*h;
-end
-Emech=6*sum(Atrap);
+
 tau_data=rover.wheel_assembly.motor.effcy_tau;
-m=length(tau_data);
 eff_data=rover.wheel_assembly.motor.effcy;
-tau_motor=linspace(tau_data(1),tau_data(m),100);
-eff=interp1(tau_data,eff_data,tau_motor,'spline');
-E=Emech/eff(tau_dcmotor(motorW(v,rover),motor);
+%eff=interp1(tau_data,eff_data,tau_motor,'spline');
+
+P=mechpower(v,rover);
+w=motorW(v,rover);
+tau=tau_dcmotor(w,rover);
+i=max(size(tau));
+eff=zeros(i,1);
+P_new=zeros(i,1);
+for j=1:i
+    eff(j)=interp1(tau_data,eff_data,tau(j),'spline');
+    P_new(j)=P(j)/eff(j);
+end
+
+h=(t(n)-t(1))/(n-1);
+Atrap=zeros(n-1,1);
+for i=1:n-1
+    Atrap(i)=(P_new(i)+P_new(i+1))/2*h;
+end
+
+E=6*sum(Atrap);
 end
 
